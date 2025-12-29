@@ -47,3 +47,9 @@ easytier-gui/src-tauri/*.sys
 # SQLite database files
 et.db*
 **/et.db*
+
+# Large binary installers
+*.exe
+!target/**/*.exe
+LLVM-*.exe
+7z*.exe
