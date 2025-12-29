@@ -43,3 +43,7 @@ easytier-gui/src-tauri/*.sys
 
 .direnv
 .flake-profile
+
+# SQLite database files
+et.db*
+**/et.db*
