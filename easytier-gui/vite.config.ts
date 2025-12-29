@@ -1,18 +1,18 @@
-import { networkInterfaces } from 'node:os'
-import path from 'node:path'
-import process from 'node:process'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 import Vue from '@vitejs/plugin-vue'
 import { containsCidr, parseCidr } from 'cidr-tools'
 import { gateway4sync } from 'default-gateway'
+import { networkInterfaces } from 'node:os'
+import path from 'node:path'
+import process from 'node:process'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
-import VueDevTools from 'vite-plugin-vue-devtools'
+// import VueDevTools from 'vite-plugin-vue-devtools'
 import Layouts from 'vite-plugin-vue-layouts'
 
 function findIp(gateway: string) {
@@ -97,7 +97,7 @@ export default defineConfig(async () => ({
     }),
 
     // https://github.com/webfansplz/vite-plugin-vue-devtools
-    VueDevTools(),
+    // VueDevTools(),
   ],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
