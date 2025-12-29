@@ -3,7 +3,7 @@ name = "easytier"
 description = "A full meshed p2p VPN, connecting all your devices in one network with one command."
 homepage = "https://github.com/EasyTier/EasyTier"
 repository = "https://github.com/EasyTier/EasyTier"
-version = "2.4.5"
+version = "2.5.0"
 edition = "2021"
 authors = ["kkrainbow"]
 keywords = ["vpn", "p2p", "network", "easytier"]
@@ -238,7 +238,7 @@ dbus = { version = "0.9.7", features = ["vendored"] }
 which = "7.0.3"
 
 [target.'cfg(all(windows, any(target_arch = "x86_64", target_arch = "x86")))'.dependencies]
-windivert = { version = "0.6.0", features = ["static"] }
+windivert = { git = "https://github.com/EasyTier/windivert-rust.git", rev = "adcc56d1550f7b5377ec2b3429f413ee24a77375", features = ["static"] }
 
 [target.'cfg(windows)'.dependencies]
 windows = { version = "0.52.0", features = [
